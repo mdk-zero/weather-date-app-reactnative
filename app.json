@@ -9,7 +9,10 @@
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "Allow weather-date-app-reactnative to use your location for local weather updates."
+      }
     },
     "android": {
       "adaptiveIcon": {
@@ -27,6 +30,12 @@
     },
     "plugins": [
       "expo-router",
+      [
+        "expo-location",
+        {
+          "locationWhenInUsePermission": "Allow weather-date-app-reactnative to use your location for local weather updates."
+        }
+      ],
       [
         "expo-splash-screen",
         {
